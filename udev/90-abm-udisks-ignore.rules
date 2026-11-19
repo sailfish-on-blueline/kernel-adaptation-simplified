@@ -1,0 +1,2 @@
+SUBSYSTEM=="block", ENV{ID_PART_ENTRY_NAME}=="abm_settings", ENV{UDISKS_IGNORE}="1", ENV{SYSTEMD_WANTS}=""
+SUBSYSTEM=="block", KERNEL=="mmcblk*p*", PROGRAM="/bin/grep -qE '(systempart|datapart)=/dev/%k( |$)' /proc/cmdline", ENV{UDISKS_IGNORE}="1", ENV{SYSTEMD_WANTS}=""
